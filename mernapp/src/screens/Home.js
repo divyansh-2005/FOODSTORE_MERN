@@ -36,9 +36,9 @@ export default function Home() {
       {/* <div> <Carousal /> </div> */ /* carousal cant be used as a component because it has Search Bar*/}
 
       <div>
-              <div id="carouselExampleFade" className="carousel slide carousel-fade " data-bs-ride="carousel">
+              <div id="carouselExampleFade" className="carousel slide carousel-fade " data-bs-ride="carousel" >
 
-        <div className="carousel-inner " id='carousel'>
+        <div className="carousel-inner " id='carousel' style={{maxHeight:"400px"}}>
             <div className=" carousel-caption  " style={{ zIndex: "9" }}>
                 <div className=" d-flex justify-content-center">  {/* justify-content-center, copy this <form> from navbar for search box */}
                     <input className="form-control me-2 w-75 bg-white text-dark" type="search" placeholder="search..." aria-label="Search" value={search} onChange={(e)=>{setsearch(e.target.value)}}/>
@@ -46,13 +46,13 @@ export default function Home() {
                 </div>
             </div>
             <div className="carousel-item active" >
-                <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100  " style={{"max-height":"400px", widht:"auto",filter: "brightness(30%)" }} alt="..." />
+                <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100  " style={{filter: "brightness(30%)" }} alt="..." />
             </div>
             <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/900x700/?pastry" className="d-block w-100 " style={{"max-height":"400px", widht:"auto",filter: "brightness(30%)" }} alt="..." />
+                <img src="https://source.unsplash.com/random/900x700/?pastry" className="d-block w-100 " style={{filter: "brightness(30%)" }} alt="..." />
             </div>
             <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/900x700/?barbeque" className="d-block w-100 " style={{"max-height":"400px", widht:"auto",filter: "brightness(30%)" }} alt="..." />
+                <img src="https://source.unsplash.com/random/900x700/?barbeque" className="d-block w-100 " style={{filter: "brightness(30%)" }} alt="..." />
             </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -68,7 +68,7 @@ export default function Home() {
 
       <div className="container"> 
         {
-          foodCat != []
+          foodCat.lenght !== 0
           ? foodCat.map((data)=>{
             return (
               <div className="row mb-3">
@@ -83,9 +83,8 @@ export default function Home() {
                 return(
                   <>
                   <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
-                    <Card foodName = {filterItems.name} 
+                    <Card foodItem = {filterItems} 
                           options={filterItems.options[0]}
-                          imgSrc={filterItems.img}
                     />
                   </div>
                   </>
