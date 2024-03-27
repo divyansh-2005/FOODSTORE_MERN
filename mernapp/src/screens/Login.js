@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Link,Navigate,useNavigate } from 'react-router-dom';
-
+import Footer from '../components/Footer';
+import Navbar from '../components/Navebar';
 
 export default function Login() {
     const [credentials, setCredentials] = useState({ email: "", password: ""});
@@ -37,7 +38,10 @@ export default function Login() {
     }
 
   return (
+    <>
+    <Navbar />
     <div className='mt-3 container'>
+    <h1 className='m-2 text-center'>Login</h1>
     <form onSubmit={handleSubmit}>
         
         <div className="mb-3">
@@ -54,5 +58,7 @@ export default function Login() {
         <Link to="/createuser" className='m-3 btn btn-danger'>I'm a new user</Link>
     </form>
 </div>
+<Footer />
+</>
   )
 }
