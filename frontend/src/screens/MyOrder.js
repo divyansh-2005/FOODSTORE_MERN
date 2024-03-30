@@ -14,7 +14,7 @@ export default function MyOrder() {
         if (!userEmail) return;
 
         try {
-            const response = await fetch("http://localhost:5000/api/myorderData", {
+            const response = await fetch("https://foodstore-mern.onrender.com/api/myorderData", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
