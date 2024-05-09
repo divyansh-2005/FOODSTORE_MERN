@@ -4,7 +4,7 @@
 Food Store is a responsive web application that allows users to browse a variety of food items, add them to their cart, and place orders online. Built with the MERN stack, this project leverages MongoDB, Express.js, React.js, and Node.js to offer a seamless shopping experience.
 
 # Demo
-    [Link of Demo video](https://drive.google.com/file/d/1xLYGNRmkYu3feHFxaW6ZSHlPigx_mFPu/view?usp=sharing)
+[Link to demo video](https://drive.google.com/file/d/1xLYGNRmkYu3feHFxaW6ZSHlPigx_mFPu/view?usp=sharing)
 
 # Live link
     https://food-store-mern.vercel.app 
