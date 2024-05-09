@@ -1,7 +1,3 @@
-Sure, I can help you create a README file for your MERN stack food store project. Below is a template that you can customize further according to your specific project details.
-
----
-
 # Food Store
 
 ## Description
