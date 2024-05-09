@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
-const mongouri = 'mongodb+srv://divyansh:dev2022@cluster0.cfpmu1o.mongodb.net/gofood?retryWrites=true&w=majority&appName=Cluster0';
+const dotenv = require("dotenv");
+dotenv.config();
+
+const mongouri = process.env.MONGO_URL;
 //added database name in url
 
 const mongoDB = async () => {
